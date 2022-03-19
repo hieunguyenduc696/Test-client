@@ -1,18 +1,13 @@
 export const columns = [
-    { id: "name", label: "Name", minWidth: 100 },
-    { id: "type", label: "Wellness Type", minWidth: 100 },
-    { id: "location", label: "Location", minWidth: 170 },
-    { id: "date1", label: "Proposed DateTime 1", minWidth: 170 },
-    { id: "date2", label: "Proposed DateTime 2", minWidth: 170 },
-    { id: "date3", label: "Proposed DateTime 3", minWidth: 170 },
+    { id: "name", label: "Name", minWidth: 150 },
+    { id: "type", label: "Wellness Type", minWidth: 140 },
+    { id: "location", label: "Location", minWidth: 100 },
+    { id: "date1", label: "DateTime 1", minWidth: 100 },
+    { id: "date2", label: "DateTime 2", minWidth: 100 },
+    { id: "date3", label: "DateTime 3", minWidth: 100 },
+    { id: "confirmedDate", label: "Confirmed Date", minWidth: 100 },
     { id: "status", label: "Status", minWidth: 100 },
+    { id: "action", label: "Action", minWidth: 100 },
+    { id: "note", label: "Note", minWidth: 100 },
 ];
   
-export const rows = [
-    { name: "Max", type: "Fitness Activities", location: "New York", date1: "20/2", date2: "20/2", date3: "20/2", status: "Pending" },
-    { name: "Max", type: "Fitness Activities", location: "New York", date1: "20/2", date2: "20/2", date3: "20/2", status: "Approved" },
-    { name: "Max", type: "Fitness Activities", location: "New York", date1: "20/2", date2: "20/2", date3: "20/2", status: "Pending" },
-    { name: "Max", type: "Fitness Activities", location: "New York", date1: "20/2", date2: "20/2", date3: "20/2", status: "Approved" },
-    { name: "Max", type: "Fitness Activities", location: "New York", date1: "20/2", date2: "20/2", date3: "20/2", status: "Pending" },
-    { name: "Max", type: "Fitness Activities", location: "New York", date1: "20/2", date2: "20/2", date3: "20/2", status: "Rejected"},
-];

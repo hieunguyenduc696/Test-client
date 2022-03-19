@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   root: {
-    width: "80%",
+    width: "100%",
     margin: "2rem auto",
   },
   container: {
@@ -24,25 +24,31 @@ export default makeStyles((theme) => ({
       backgroundColor: "rgba(239, 207, 207, 1)",
     },
   },
-  actions: {
-    display: "flex",
-    justifyContent: "flex-end",
-    padding: "2rem"
+  action: {
+    padding: "5px",
+    borderRadius: "5px",
+    cursor: "pointer",
   },
-  addButton: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    textAlign: "flex-end",
+  Cancel: {
+    color: "red",
+    backgroundColor: "rgba(239, 207, 207, 1)",
+  },
+  Approved: {
+    color: "green",
+    backgroundColor: "rgba(0, 128, 0, 0.151)",
+  },
+  Rejected: {
+    color: "red",
+    backgroundColor: "rgba(239, 207, 207, 1)",
   },
   modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    border: "2px solid #000",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },

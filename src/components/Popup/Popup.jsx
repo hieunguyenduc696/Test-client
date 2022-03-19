@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Modal, Backdrop, Fade, Typography, TextField, Button } from "@material-ui/core";
 import Form from "../Form/Form";
+import { useSelector } from "react-redux";
 
 import useStyles from './styles';
 
-const Popup = ({ open, handleOpen, handleClose }) => {
+const Popup = ({ open, handleOpen, handleClose, isCreating, isApproving, isRejecting, currentId }) => {
   const classes = useStyles();
+  const booking = useSelector(state => state.bookings.find(booking => booking._id === currentId));
+
   return (
     <Modal
       aria-labelledby="transition-modal-title"
@@ -21,8 +24,7 @@ const Popup = ({ open, handleOpen, handleClose }) => {
     >
       <Fade in={open}>
         <div className={classes.paper}>
-          <Typography variant="h4" color="primary">Creating Booking</Typography>
-          <Form isCreating={true} />
+            <Form isCreating={isCreating} isApproving={isApproving} isRejecting={isRejecting} handleClose={handleClose} booking={booking} currentId={currentId} />
         </div>
       </Fade>
     </Modal>

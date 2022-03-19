@@ -5,14 +5,13 @@ export default makeStyles((theme) => ({
     "& .MuiTextField-root": {
       margin: theme.spacing(1),
     },
-    "& .MuiFormLabel-root": {
-      margin: theme.spacing(1),
-    },
-    "& .MuiSelect-root": {
-      margin: theme.spacing(0, 1),
-    },
+  },
+  type: {
+    width: "100%",
+    margin: theme.spacing(1)
   },
   container: {
+    width: "100%",
     display: "flex",
     flexWrap: "wrap",
   },
@@ -20,5 +19,10 @@ export default makeStyles((theme) => ({
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     width: 200,
+  },
+  buttonSubmit: {
+    display: "flex",
+    marginLeft: "auto",
+    marginTop: "20px",
   },
 }));
