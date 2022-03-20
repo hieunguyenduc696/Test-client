@@ -1,13 +1,26 @@
-import React, { useState } from "react";
-import { Modal, Backdrop, Fade, Typography, TextField, Button } from "@material-ui/core";
+import React from "react";
+import {
+  Modal,
+  Backdrop,
+  Fade,
+} from "@material-ui/core";
 import Form from "../Form/Form";
 import { useSelector } from "react-redux";
 
-import useStyles from './styles';
+import useStyles from "./styles";
 
-const Popup = ({ open, handleOpen, handleClose, isCreating, isApproving, isRejecting, currentId }) => {
+const Popup = ({
+  open,
+  handleClose,
+  isCreating,
+  isApproving,
+  isRejecting,
+  currentId,
+}) => {
   const classes = useStyles();
-  const booking = useSelector(state => state.bookings.find(booking => booking._id === currentId));
+  const booking = useSelector((state) =>
+    state.bookings.find((booking) => booking._id === currentId)
+  );
 
   return (
     <Modal
@@ -24,7 +37,14 @@ const Popup = ({ open, handleOpen, handleClose, isCreating, isApproving, isRejec
     >
       <Fade in={open}>
         <div className={classes.paper}>
-            <Form isCreating={isCreating} isApproving={isApproving} isRejecting={isRejecting} handleClose={handleClose} booking={booking} currentId={currentId} />
+          <Form
+            isCreating={isCreating}
+            isApproving={isApproving}
+            isRejecting={isRejecting}
+            handleClose={handleClose}
+            booking={booking}
+            currentId={currentId}
+          />
         </div>
       </Fade>
     </Modal>

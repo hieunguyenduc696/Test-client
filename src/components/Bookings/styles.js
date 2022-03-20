@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   container: {
     margin: "0 auto",
-    padding: "0 2rem"
+    padding: "0 2rem",
   },
   notFound: {
     display: "flex",
@@ -19,6 +19,6 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "flex-end",
     textAlign: "flex-end",
-    marginLeft: "auto"
+    marginLeft: "auto",
   },
 }));

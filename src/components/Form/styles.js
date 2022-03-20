@@ -8,17 +8,20 @@ export default makeStyles((theme) => ({
   },
   type: {
     width: "100%",
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
   },
   container: {
     width: "100%",
     display: "flex",
+    justifyContent: "center",
     flexWrap: "wrap",
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 200,
+    [theme.breakpoints.down('sm')]: {
+      width: "100%",
+    }
   },
   buttonSubmit: {
     display: "flex",

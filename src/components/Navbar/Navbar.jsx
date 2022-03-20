@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { AppBar, Typography, Toolbar, Avatar, Button } from "@material-ui/core";
+import { AppBar, Typography, Toolbar, Button } from "@material-ui/core";
 import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
 
@@ -24,6 +24,7 @@ const Navbar = () => {
   useEffect(() => {
     const token = user?.token;
 
+    // expire
     if (token) {
       const decodedToken = decode(token);
 
@@ -36,7 +37,9 @@ const Navbar = () => {
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
       <Link className={classes.brandContainer} to="/">
-          <Typography className={classes.header} variant="h4" color="inherit">Booking</Typography>
+        <Typography className={classes.header} variant="h4" color="inherit">
+          Booking
+        </Typography>
       </Link>
       <Toolbar className={classes.toolbar}>
         {user && (
