@@ -29,7 +29,7 @@ const SignUp = () => {
   const handleShowPassword = () => setShowPassword(!showPassword);
 
   const switchMode = () => {
-    setForm(initialState);
+    setError("");
     setIsSignup((prevIsSignup) => !prevIsSignup);
     setShowPassword(false);
   };
@@ -61,12 +61,14 @@ const SignUp = () => {
             <Input
               name="name"
               label="User Name"
+              value={form.name}
               handleChange={handleChange}
               type="text"
             />
             <Input
               name="password"
               label="Password"
+              value={form.password}
               handleChange={handleChange}
               type={showPassword ? "text" : "password"}
               handleShowPassword={handleShowPassword}
