@@ -17,6 +17,7 @@ You may also see any lint errors in the console.
 ### Accounts
 
 1 account for admin: username: admin, password: admin
+###
 2 accounts for company HR: 
 - username: Hieunguyen, password: 123123
 - username: Max, password: 123123
